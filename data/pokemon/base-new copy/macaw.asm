@@ -1,0 +1,21 @@
+	db <name> ; 151
+
+	db -, -, -, -, -, -
+	;   hp  atk  def  spd  sat  sdf
+
+	db 1_TYPE, 2_TYPE ; type
+	db - ; catch rate
+	db - ; base exp
+	db NO_ITEM, NO_ITEM ; items
+	db GENDER_UNKNOWN ; gender ratio
+	db 100 ; unknown 1
+	db 20 ; step cycles to hatch
+	db 5 ; unknown 2
+	INCBIN "gfx/pokemon/<name>/front.dimensions"
+	dw NULL, NULL ; unused (beta front/back pics)
+	db GROWTH_- ; growth rate
+	dn EGG_-, EGG_- ; egg groups
+
+	; tm/hm learnset
+	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROLLOUT, ROAR, TOXIC, ZAP_CANNON, ROCK_SMASH, PSYCH_UP, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, IRON_TAIL, DRAGONBREATH, THUNDER, EARTHQUAKE, RETURN, DIG, PSYCHIC_M, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, SANDSTORM, FIRE_BLAST, SWIFT, DEFENSE_CURL, THUNDERPUNCH, DREAM_EATER, DETECT, REST, ATTRACT, THIEF, STEEL_WING, FIRE_PUNCH, FURY_CUTTER, NIGHTMARE, CUT, FLY, SURF, STRENGTH, FLASH, WHIRLPOOL, WATERFALL, FLAMETHROWER, THUNDERBOLT, ICE_BEAM
+	; end
